@@ -1,6 +1,6 @@
 // COPY the exercise condition and the class in the code editor
 
-(() => {
+const copyInstructionsAndCode = () => {
   // 1. Grab instructions text
   const instrDiv = document.querySelector('[data-purpose="instructions-content"]');
   const instrText = instrDiv
@@ -27,4 +27,23 @@
   document.body.removeChild(ta);
 
   console.log('✅ Instructions + code copied to clipboard');
-})();
+};
+
+copyInstructionsAndCode();
+
+
+// Mark all checkboxes as checked
+const checkAllCheckboxes = () => {
+  document
+    .querySelectorAll('input[type="checkbox"]')
+    .forEach(box => {
+      if (!box.checked) {
+        box.click();
+      }
+    });
+};
+
+
+checkAllCheckboxes();
+
+
